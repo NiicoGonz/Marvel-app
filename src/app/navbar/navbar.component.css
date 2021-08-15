@@ -1,0 +1,10 @@
+.navbar{
+  background: rgb(237, 29, 36);
+  margin-bottom: 2%;
+}
+.nav-link{
+  color: aliceblue !important;
+}
+.logo{
+  width: 10%;
+}

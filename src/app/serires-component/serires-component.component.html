@@ -1,0 +1,30 @@
+  <!---->
+  <div class="container">
+
+    <div *ngIf="!load" class="container text-center">
+      <img src="../../assets/img/Avengers_logo.png" class="ld  ld-coin-h" />
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col mb-3" *ngFor="let i of nombre">
+        <div class="card h-100">
+          <img src="{{i['thumbnail']['path']+ '/standard_amazing.jpg'}}" class="img-thumbnail" alt="">
+          <img *ngIf="i['thumbnail']['extension']  !=  'jpg' " src="https://cdn.worldvectorlogo.com/logos/marvel.svg"
+            style="width: 318px; height: 318px;" class="img-thumbnail " alt="">
+          <div class="card-header">
+            <p> <b>{{ i["title"] }}</b></p>
+          </div>
+          <div class="card-body " *ngIf="i['description'] != '' ">
+            <b>Numero de comics: {{ i['comics']['available'] }} </b>
+          </div>
+          <div class="card-body " *ngIf="i['description'] == 'null' ">
+            <b> Numero de comics: {{ i['comics']['available'] }} </b>
+          </div>
+          <div class="card-footer">
+            <p>Data provided by Marvel. © 2021 MARVEL</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
