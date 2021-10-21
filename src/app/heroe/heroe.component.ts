@@ -22,7 +22,7 @@ export class HeroeComponent implements OnInit {
     console.log(heroe);
     this.service
       .getRequest(
-        `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${heroe.nombre}?ts=100&apikey=a7c8869708fbdd8bcb872041697e0020&hash=6b715e76589d583f5f243ce7370b8c70`
+        `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${heroe.nombre}&apikey=a7c8869708fbdd8bcb872041697e0020`
       )
       .subscribe((response: any) => {
         const {data}=response;
